@@ -1,0 +1,955 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kshema Power | Group Entities</title>
+    <meta name="description" content="Distribution Projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/jarallax.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<style>
+    .loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        text-align: center;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url(../images/shape/dot-grid.png);
+    }
+
+    .features-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 150px;
+        background: #00B5AC;
+        border-radius: 10px;
+        z-index: -1;
+    }
+
+    .features-item-inner {
+        border-radius: 10px;
+        background: #000000;
+        padding: 45px 48px 50px;
+        box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    @media (max-width: 1500px) {
+        .features-icon::before {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .features-icon::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 148px;
+        height: 148px;
+        border-radius: 50%;
+        background: #b0fff867;
+        z-index: -1;
+    }
+
+    /* .slider-content-wrap {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 49.8%;
+                z-index: 1;
+                background: rgba(0, 0, 0, 0.877);
+                border-radius: 0px 150px 12px 0px;
+            } */
+    .btn {
+        background: linear-gradient(to bottom, #15B8FE, #0d2530);
+        border-radius: 10px;
+    }
+
+    .slider-area {
+        margin-bottom: 3px;
+    }
+
+    @media (max-width: 991.98px) {
+        .menu-area {
+            padding: 31px 0;
+        }
+    }
+
+    @media (max-width: 1500px) {
+        .banner-content .title {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: var(--tg-white);
+        }
+    }
+
+    .banner-content {
+        width: 90%;
+        flex: 0 0 auto;
+    }
+
+    .banner-content p {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--tg-white);
+        font-weight: 400;
+        font-family: var(--tg-heading-font-family);
+    }
+
+    .services-area-three .services-bg::before {
+        background: rgb(12 18 57 / 0%);
+    }
+
+    .services-item-three {
+        background: #000000c9;
+
+    }
+
+    .brand-item img {
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        max-height: 100px;
+        filter: grayscale(100%);
+    }
+
+    .breadcrumb-bg {
+        background-size: cover;
+        background-position: center;
+        padding: 160px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .project-content-two {
+        background: #00B5AC;
+    }
+
+    .menu-area-three .navbar-wrap ul {
+        margin: 0 0 0 4px;
+    }
+
+    .services-item-three {
+        background: #00000000;
+    }
+
+    .team-social-three .list-wrap {
+        display: flex;
+        flex-direction: column;
+        background: #00b5ac6b;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 18px 8px;
+        border-radius: 4px 4px 4px 4px;
+        gap: 1px;
+        border: 7px solid #ffffff00;
+        border-top: none;
+        border-right: none;
+        opacity: 0;
+        transform: translateX(100px);
+        visibility: hidden;
+        transition: .3s linear;
+    }
+
+    .blog-post-content {
+        padding: 6px 35px 3px;
+        position: relative;
+    }
+
+    .project-thumb {
+        position: absolute;
+        top: 0;
+        transform: none;
+        right: 16%;
+        z-index: 9;
+        display: none;
+        margin-top: -37px;
+    }
+</style>
+
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loading-text">
+                <img src="assets/images/logo.png" width="50%">
+            </div><!-- .loading-text -->
+        </div><!-- .loader -->
+    </div><!-- .loader-wrapper -->
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-level-up-alt"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header>
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="menu-area menu-area-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo" style="width: 240px;">
+                                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Corporate</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html">Corporate Overview</a></li>
+                                                <li><a href="The-People-Behind.html">The People Behind</a></li>
+                                                <li><a href="Certifications.html">Certifications & Awards</a></li>
+                                                <li><a href="Group-Entities.html">Group Entities</a></li>
+                                                <li><a href="The-Journey.html">The Journey</a></li>
+                                                <li><a href="CSR-Activities.html">CSR Activities</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="key-services.html">Key Services</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Projects</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Ongoing-Projects.html">Ongoing Projects</a></li>
+                                                <li><a href="Completed-Projects.html">Completed Projects</a></li>
+                                                <li><a href="Future-Development.html">Future Development</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">More</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="https://www.kshemapower.com/downloads/E-brochure-Kshema-power.pdf"
+                                                        target="_blank">E-Brochure</a></li>
+                                                <li><a href="carrier.html">Carriers</a></li>
+                                                <li><a href="mentors.html">Mentors</a></li>
+                                                <li><a href="clinet.html">Clinets</a></li>
+                                                <li><a href="core-team.html">Core team</a></li>
+
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="reachus.html">Reach Us</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="header-action d-none d-md-block">
+                                    <ul class="list-wrap">
+                                        <li class="header-btn"><a href="join-kshema.html" class="btn">Join Kshema</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Mobile Menu  -->
+                        <div class="mobile-menu">
+                            <nav class="menu-box">
+                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <div class="nav-logo">
+                                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="menu-outer">
+                                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                </div>
+                                <div class="social-links">
+                                    <ul class="clearfix list-wrap">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-backdrop"></div>
+                        <!-- End Mobile Menu -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area-end -->
+
+
+    <!-- mian-area -->
+    <main>
+
+        <section class="breadcrumb-area breadcrumb-bg" data-background="assets/images/milstones-banner.jpg"
+            style="background-image: url(assets/images/milstones-banner.jpg);">
+            <div class="breadcrumb-shape" data-background="assets/img/images/breadcrumb_shape.png"
+                style="background-image: url(&quot;assets/img/images/breadcrumb_shape.png&quot;);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-content">
+                            <h2 class="title">The Journey</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Journey</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <center>
+            <img src="assets/images/team-banner.jpg" style="padding: 20px; border-radius: 40px;" alt="">
+        </center> -->
+        <style>
+            header h1 {
+                text-align: center;
+                font-weight: bold;
+                margin-top: 0;
+            }
+
+            header p {
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            .hexa {
+                border: 0px;
+                float: left;
+                text-align: center;
+                height: 35px;
+                width: 60px;
+                font-size: 22px;
+                background: #f0f0f0;
+                color: #3c3c3c;
+                position: relative;
+                margin-top: 15px;
+            }
+
+            .hexa:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-bottom: 15px solid #f0f0f0;
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+                top: -15px;
+            }
+
+            .hexa:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+                border-top: 15px solid #f0f0f0;
+                bottom: -15px;
+            }
+
+            .timeline {
+                position: relative;
+                padding: 0;
+                width: 100%;
+                margin-top: 20px;
+                list-style-type: none;
+            }
+
+            .timeline:before {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                content: ' ';
+                display: block;
+                width: 2px;
+                height: 100%;
+                margin-left: -1px;
+                background: rgb(213, 213, 213);
+                background: -moz-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+                background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+                background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+                background: -ms-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+                background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+                z-index: 5;
+            }
+
+            .timeline li {
+                padding: 2em 0;
+            }
+
+            .timeline .hexa {
+                width: 16px;
+                height: 10px;
+                position: absolute;
+                background: #00c4f3;
+                z-index: 5;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: -30px;
+                margin-top: 0;
+            }
+
+            .timeline .hexa:before {
+                border-bottom: 4px solid #00c4f3;
+                border-left-width: 8px;
+                border-right-width: 8px;
+                top: -4px;
+            }
+
+            .timeline .hexa:after {
+                border-left-width: 8px;
+                border-right-width: 8px;
+                border-top: 4px solid #00c4f3;
+                bottom: -4px;
+            }
+
+            .direction-l,
+            .direction-r {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .flag-wrapper {
+                text-align: center;
+                position: relative;
+            }
+
+            .flag {
+                position: relative;
+                display: inline;
+                background: rgb(255, 255, 255);
+                font-weight: 600;
+                z-index: 15;
+                padding: 6px 10px;
+                text-align: left;
+                border-radius: 5px;
+            }
+
+            .direction-l .flag:after,
+            .direction-r .flag:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: -15px;
+                height: 0;
+                width: 0;
+                margin-left: -8px;
+                border: solid transparent;
+                border-bottom-color: rgb(255, 255, 255);
+                border-width: 8px;
+                pointer-events: none;
+            }
+
+            .direction-l .flag {
+                -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+                -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+                box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            }
+
+            .direction-r .flag {
+                -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+                -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            }
+
+            .time-wrapper {
+                display: block;
+                position: relative;
+                margin: 4px 0 0 0;
+                z-index: 14;
+                line-height: 1em;
+                vertical-align: middle;
+                color: #fff;
+            }
+
+            .direction-l .time-wrapper {
+                float: none;
+            }
+
+            .direction-r .time-wrapper {
+                float: none;
+            }
+
+            .time {
+                background: #00c4f3;
+                display: inline-block;
+                padding: 8px;
+            }
+
+            .desc {
+                position: relative;
+                margin: 1em 0 0 0;
+                padding: 1em;
+                background: rgb(254, 254, 254);
+                -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+                -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+                z-index: 15;
+            }
+
+            .direction-l .desc,
+            .direction-r .desc {
+                position: relative;
+                margin: 1em 1em 0 1em;
+                padding: 1em;
+                z-index: 15;
+            }
+
+            @media(min-width: 768px) {
+                .timeline {
+                    width: 660px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
+
+                .timeline li:after {
+                    content: "";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+
+                .timeline .hexa {
+                    left: -28px;
+                    right: auto;
+                    top: 8px;
+                }
+
+                .timeline .direction-l .hexa {
+                    left: auto;
+                    right: -28px;
+                }
+
+                .direction-l {
+                    position: relative;
+                    width: 310px;
+                    float: left;
+                    text-align: right;
+                }
+
+                .direction-r {
+                    position: relative;
+                    width: 310px;
+                    float: right;
+                    text-align: left;
+                }
+
+                .flag-wrapper {
+                    display: inline-block;
+                }
+
+                .flag {
+                    font-size: 18px;
+                }
+
+                .direction-l .flag:after {
+                    left: auto;
+                    right: -16px;
+                    top: 50%;
+                    margin-top: -8px;
+                    border: solid transparent;
+                    border-left-color: rgb(254, 254, 254);
+                    border-width: 8px;
+                }
+
+                .direction-r .flag:after {
+                    top: 50%;
+                    margin-top: -8px;
+                    border: solid transparent;
+                    border-right-color: rgb(254, 254, 254);
+                    border-width: 8px;
+                    left: -8px;
+                }
+
+                .time-wrapper {
+                    display: inline;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+
+                .direction-l .time-wrapper {
+                    float: left;
+                }
+
+                .direction-r .time-wrapper {
+                    float: right;
+                }
+
+                .time {
+                    padding: 5px 10px;
+                }
+
+                .direction-r .desc {
+                    margin: 1em 0 0 0.75em;
+                }
+            }
+
+            @media(min-width: 992px) {
+                .timeline {
+                    width: 800px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
+
+                .direction-l {
+                    position: relative;
+                    width: 380px;
+                    float: left;
+                    text-align: right;
+                }
+
+                .direction-r {
+                    position: relative;
+                    width: 380px;
+                    float: right;
+                    text-align: left;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .direction-r .time-wrapper {
+                    float: left;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .direction-l .time-wrapper {
+                    float: right;
+                }
+            }
+        </style>
+        <br><br>
+        <header>
+            <!-- <p>Worked on all modern browers</p> -->
+            <h1>THE JOURNEY</h1>
+        </header>
+
+        <ul class="timeline">
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">2500 MW Milestone</span>
+                        <span class="time-wrapper"><span class="time">2016</span></span>
+                    </div>
+                    <div class="desc">From 500 MW in 2009 to 2500 MW in 2016 showed an extraordinary growth within 7
+                        years.
+
+                        Won the best Renewable Energy Developer Award for Madhya Pradesh from MPNRED.
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Double the Quantum & ISO Certified</span>
+                        <span class="time-wrapper"><span class="time">2015</span></span>
+                    </div>
+                    <div class="desc">EPC Contracts signed for 819 MW and work commenced for the same.<br><br>
+
+                        Certified by Intertek for Integrated Management System (IMS) during the year.
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Foray into Solar EPC</span>
+                        <span class="time-wrapper"><span class="time">2014</span></span>
+                    </div>
+                    <div class="desc">First contract for 50 MW Solar EPC with SunEdison signed.</div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">500 MW Milestone
+                        </span>
+                        <span class="time-wrapper"><span class="time">2009</span></span>
+                    </div>
+                    <div class="desc">Developed 500 MW wind farm development for Vestas between 2005 and 2009. Founder's
+                        dream of establishing a wind farm in Kerala became a reality
+                        .</div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Growth Phase
+                        </span>
+                        <span class="time-wrapper"><span class="time">2005</span></span>
+                    </div>
+                    <div class="desc">Transformed into a wind farm development company by undertaking construction of
+                        foundations, Road works, Transmission line works, BOP, Permits and Approvals
+                        .</div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Turning Point
+                        </span>
+                        <span class="time-wrapper"><span class="time">2003</span></span>
+                    </div>
+                    <div class="desc">NEG Micon recognizes Kshema's zeal for wind power and development and gave an
+                        order of land procurement for 50 MW Project in 2003.
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">The Foundation
+                        </span>
+                        <span class="time-wrapper"><span class="time">1998</span></span>
+                    </div>
+                    <div class="desc">Established by Dr. Basant during 1998 with a vision of building wind farms in
+                        Kerala.
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+
+
+    </main>
+    <!-- mian-area-end -->
+
+    <!-- footer-area -->
+    <footer>
+        <div class="footer-area footer-bg" data-background="assets/img/bg/footer_bg.jpg">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-7">
+                            <div class="footer-widget">
+                                <img src="assets/images/logo2.png">
+                                <div class="footer-content mt-3">
+                                    <p>Kshema Power & Infrastructure diversifies its business portfolio into three main
+                                        business verticals and contributes to our society by excelling in them. Your
+                                        search for developing a quality renewable energy infrastructure ends here!
+
+                                    </p>
+                                    <div class="footer-newsletter">
+                                        <h4 class="title">Subscribe to Our Newsletter</h4>
+                                        <form action="#">
+                                            <input type="text" placeholder="Enter your email">
+                                            <button type="submit" class="btn btn-two">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Our Services</h2>
+                                <div class="footer-link">
+                                    <ul class="list-wrap">
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Solar & Wind Energy
+                                                Resource Assessment</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Micro-siting</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Land Related
+                                                Services</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Project Reports</a>
+                                        </li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Approvals &
+                                                Permits</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Project Execution</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Quick Links</h2>
+                                <div class="footer-link">
+                                    <ul class="list-wrap">
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Home</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Corporate</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Key Service</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Projects</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Join Kshema</a></li>
+                                        <li><a href="#!"><i class="fas fa-angle-double-right"></i>Reach Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Gallery</h2>
+                                <div class="footer-instagram">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img01.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img02.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img03.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img04.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img05.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img06.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="footer-logo-area">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-contact">
+                                    <div class="icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>Phone No</span>
+                                        <a href="tel:0123456789">+000 (123) 456 88</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-6">
+                                <div class="footer-social">
+                                    <h2 class="title">Follow Us:</h2>
+                                    <ul class="list-wrap">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="copyright-text">
+                                <p>© Copyright 2023. All Right Reserved | Developed By <a href="https://nixonit.com/">NixoNit</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-bootom-menu">
+                                <ul class="list-wrap">
+                                    <li><a href="#!">Privacy Policy</a></li>
+                                    <li><a href="#!">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/slick-animation.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/gsap-animation.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/loader.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,2063 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kshema Power | Join Kshema</title>
+    <meta name="description" content="Distribution Projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/jarallax.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<style>
+    .loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        text-align: center;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url(../images/shape/dot-grid.png);
+    }
+
+    .features-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 150px;
+        background: #00B5AC;
+        border-radius: 10px;
+        z-index: -1;
+    }
+
+    .features-item-inner {
+        border-radius: 10px;
+        background: #000000;
+        padding: 45px 48px 50px;
+        box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    @media (max-width: 1500px) {
+        .features-icon::before {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .features-icon::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 148px;
+        height: 148px;
+        border-radius: 50%;
+        background: #b0fff867;
+        z-index: -1;
+    }
+
+    /* .slider-content-wrap {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 49.8%;
+                z-index: 1;
+                background: rgba(0, 0, 0, 0.877);
+                border-radius: 0px 150px 12px 0px;
+            } */
+    .btn {
+        background: linear-gradient(to bottom, #15B8FE, #0d2530);
+        border-radius: 10px;
+    }
+
+    .slider-area {
+        margin-bottom: 3px;
+    }
+
+    @media (max-width: 991.98px) {
+        .menu-area {
+            padding: 31px 0;
+        }
+    }
+
+    @media (max-width: 1500px) {
+        .banner-content .title {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: var(--tg-white);
+        }
+    }
+
+    .banner-content {
+        width: 90%;
+        flex: 0 0 auto;
+    }
+
+    .banner-content p {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--tg-white);
+        font-weight: 400;
+        font-family: var(--tg-heading-font-family);
+    }
+
+    .services-area-three .services-bg::before {
+        background: rgb(12 18 57 / 0%);
+    }
+
+    .services-item-three {
+        background: #000000c9;
+
+    }
+
+    .brand-item img {
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        max-height: 100px;
+        filter: grayscale(100%);
+    }
+
+    .breadcrumb-bg {
+        background-size: cover;
+        background-position: center;
+        padding: 160px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .project-content-two {
+        background: #00B5AC;
+    }
+
+    .menu-area-three .navbar-wrap ul {
+        margin: 0 0 0 4px;
+    }
+
+    .services-item-three {
+        background: #00000000;
+    }
+
+    .team-social-three .list-wrap {
+        display: flex;
+        flex-direction: column;
+        background: #00b5ac6b;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 18px 8px;
+        border-radius: 4px 4px 4px 4px;
+        gap: 1px;
+        border: 7px solid #ffffff00;
+        border-top: none;
+        border-right: none;
+        opacity: 0;
+        transform: translateX(100px);
+        visibility: hidden;
+        transition: .3s linear;
+    }
+
+    .appointment-inner {
+        filter: drop-shadow(0px 16px 88px rgba(0, 0, 0, 0.08));
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        padding: 70px 70px;
+        position: relative;
+        margin-top: -35px;
+    }
+
+    @media (max-width: 1500px) {
+        .appointment-img {
+            right: 17px;
+        }
+    }
+
+    @media (max-width: 1500px) {
+        .appointment-img {
+            right: 50px;
+        }
+    }
+
+    .appointment-img {
+        position: absolute;
+        right: 26px;
+        bottom: 0;
+        width: 381px;
+        top: -37px;
+    }
+
+    .appointment-img img {
+        border-radius: 10px;
+    }
+
+    .history-img-wrap .list-wrap li:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(219 0 0 / 0%);
+        border-radius: 10px;
+    }
+
+    .faq-wrap .accordion-body {
+        padding: 22px 25px;
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loading-text">
+                <img src="assets/images/logo.png" width="50%">
+            </div><!-- .loading-text -->
+        </div><!-- .loader -->
+    </div><!-- .loader-wrapper -->
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-level-up-alt"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header>
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="menu-area menu-area-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo" style="width: 240px;">
+                                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Corporate</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html">Corporate Overview</a></li>
+                                                <li><a href="The-People-Behind.html">The People Behind</a></li>
+                                                <li><a href="Certifications.html">Certifications & Awards</a></li>
+                                                <li><a href="Group-Entities.html">Group Entities</a></li>
+                                                <li><a href="The-Journey.html">The Journey</a></li>
+                                                <li><a href="CSR-Activities.html">CSR Activities</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="key-services.html">Key Services</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Projects</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Ongoing-Projects.html">Ongoing Projects</a></li>
+                                                <li><a href="Completed-Projects.html">Completed Projects</a></li>
+                                                <li><a href="Future-Development.html">Future Development</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">More</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="https://www.kshemapower.com/downloads/E-brochure-Kshema-power.pdf"
+                                                        target="_blank">E-Brochure</a></li>
+                                                <!-- <li><a href="carrier.html">Carriers</a></li>
+                                                <li><a href="mentors.html">Mentors</a></li> -->
+                                                <li><a href="clinet.html">Clinets</a></li>
+                                                <li><a href="core-team.html">Core team</a></li>
+
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="reachus.html">Reach Us</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="header-action d-none d-md-block">
+                                    <ul class="list-wrap">
+                                        <li class="header-btn"><a href="join-kshema.html" class="btn">Join Kshema</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Mobile Menu  -->
+                        <div class="mobile-menu">
+                            <nav class="menu-box">
+                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <div class="nav-logo">
+                                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="menu-outer">
+                                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                </div>
+                                <div class="social-links">
+                                    <ul class="clearfix list-wrap">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-backdrop"></div>
+                        <!-- End Mobile Menu -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area-end -->
+
+
+    <!-- mian-area -->
+    <main>
+
+        <section class="breadcrumb-area breadcrumb-bg" data-background="assets/images/career-banner1.jpg"
+            style="background-image: url(assets/images/career-banner1.jpg);">
+            <div class="breadcrumb-shape" data-background="assets/img/images/breadcrumb_shape.png"
+                style="background-image: url(&quot;assets/img/images/breadcrumb_shape.png&quot;);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-content">
+                            <h2 class="title">JOIN KSHEMA
+
+                            </h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">JOIN KSHEMA
+
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <center>
+            <img src="assets/images/team-banner.jpg" style="padding: 20px; border-radius: 40px;" alt="">
+        </center> -->
+
+        <!-- breadcrumb-area-end -->
+
+
+
+
+        <section class="appointment-area pt-115">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title white-title mb-60">
+                            <span class="">Kshema</span>
+                            <h2 style="color: #00B5AC;" class="title">JOIN KSHEMA
+
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="appointment-inner" data-background="" style="background-color: rgb(241, 241, 241);">
+                    <div class="row">
+                        <div class="col-xl-7">
+                            <div class="appointment-form">
+                                <p>At Kshema, we strongly believe people are the backbone of our growth story. We
+                                    provide conducive work environment and recognize immense talents to power our
+                                    future.<br><br>
+
+                                    Do you have what it takes to excel in building sustainable solutions for the
+                                    betterment of our society?<br><br>
+
+                                    Join us today and explore potential career growth opportunities!
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="col-xl-5">
+                            <div class="appointment-img">
+                                <img src="assets/images/img6.png" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="services-area-three">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section-title text-center mb-60">
+                            <span class="sub-title">Kshema</span>
+                            <h2 class="title">CURRENT OPENINGS</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="services-nav-wrap">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="building-tab" data-bs-toggle="tab"
+                                        data-bs-target="#building-tab-pane" type="button" role="tab"
+                                        aria-controls="building-tab-pane" aria-selected="true">WIND POWER
+                                        BUSINESS</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="maintenance-tab" data-bs-toggle="tab"
+                                        data-bs-target="#maintenance-tab-pane" type="button" role="tab"
+                                        aria-controls="maintenance-tab-pane" aria-selected="false">SOLAR
+                                        BUSINESS</button>
+                                </li>
+
+
+                            </ul>
+                            <br><br>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="building-tab-pane" role="tabpanel"
+                                    aria-labelledby="building-tab" tabindex="0">
+
+                                    <div class="row ">
+
+                                        <div class="col-xl-12">
+                                            <div class="faq-wrap">
+                                                <div class="accordion" id="accordionExample">
+
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                                aria-controls="collapseOne">
+                                                                GM Engineering
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / M.E / M.Tech ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>15 - 20 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for design and detailed engineering of
+                                                                    wind, solar Infra projects including Civil &
+                                                                    Electrical. Dealing with internal and external
+                                                                    stakeholders like consultants, funding agencies,
+                                                                    etc., would be responsible for cost optimisation and
+                                                                    cost and design optimisation. Experienced with
+                                                                    handling large scale solar utility project would be
+                                                                    preferred.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse2" aria-expanded="false"
+                                                                aria-controls="collapse2">
+                                                                GM Finance
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse2" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>CA / ICWA
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>15 - 20 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Regulatory compliance; project finance and fund
+                                                                    raising for infrastructure projects.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse3" aria-expanded="false"
+                                                                aria-controls="collapse3">
+                                                                GM Quality / Safety
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse3" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / M.E / M.Tech with QEHS certification
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>15 - 25 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Managerial Experience into EHS handling entire
+                                                                    Safety Initiatives, Safety Compliance, Safety
+                                                                    Training and Safety Policy.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse4" aria-expanded="false"
+                                                                aria-controls="collapse4">
+                                                                GM Project Development
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse4" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / M.E / M.Tech ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>15 - 25 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Main function shall be the overall development of
+                                                                    Wind, Solar and Infra projects (all India). Will
+                                                                    work closely with the respective operations head to
+                                                                    ensure timely development of projects within
+                                                                    budgets.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse5" aria-expanded="false"
+                                                                aria-controls="collapse5">
+                                                                Head - Engg
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -113px;">(Civil and Structural)</p>
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse5" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / M.E. / M.Tech ( Civil / Structural )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>10 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Design and detailed enginering of Civil and
+                                                                    structural portions of Solar and Wind
+                                                                    infrastructure, transmission and distribution
+                                                                    projects; will lead a team of design engineers and
+                                                                    be responsible for timely and cost effective
+                                                                    solutions.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse6" aria-expanded="false"
+                                                                aria-controls="collapse6">
+                                                                Head - Engg
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -115px;">( Transmission & Distribution )
+                                                                </p>
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse6" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech ( Electrical )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>10 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Design and detailed engineering of electrical
+                                                                    portions of Solar and Wind infrastructure,
+                                                                    transmission and distribution projects; will lead a
+                                                                    team of design engineers and be responsible for
+                                                                    timely and cost effective solutions.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse7" aria-expanded="false"
+                                                                aria-controls="collapse7">
+                                                                Engineer
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">Civil
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse7" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Diploma / B.E / B.Tech ( Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Design and detailed engineering of Civil portions of
+                                                                    solar and wind infrastructure, transmission and
+                                                                    distribution projects.
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse8" aria-expanded="false"
+                                                                aria-controls="collapse8">
+                                                                Engineer
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">Structural
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse8" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Diploma / B.E / B.Tech ( Electrical )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Design and detailed engineering of structural
+                                                                    portions of Solar and Wind infrastructure,
+                                                                    transmission and distribution projects.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse9" aria-expanded="false"
+                                                                aria-controls="collapse9">
+                                                                Engineer
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">( Transmission & Distribution )
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse9" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Diploma / B.E / B.Tech ( Electrical )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Design and detailed engineering of electrical
+                                                                    portions of Solar and Wind infrastructure,
+                                                                    transmission and distribution projects.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse10" aria-expanded="false"
+                                                                aria-controls="collapse10">
+                                                                Head Operations
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -153px;">State
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse10" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech ( Electrical / Civil ); MBA Added
+                                                                    Advantage
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>18 - 25 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>State Office
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for timely development and delivery of
+                                                                    all Wind, Solar & Infrastructure projects in
+                                                                    respective states.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse11" aria-expanded="false"
+                                                                aria-controls="collapse11">
+                                                                Manager
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">Dy. Manager Planning &
+                                                                    Coordination
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse11" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Diploma / B.E / B.Tech ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 8 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>State Office
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for planning and control for all
+                                                                    projects at the respective states. Role includes MIS
+                                                                    reporting to corporate and clients. Well-versed with
+                                                                    projects planning and controls including financial
+                                                                    reporting.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse12" aria-expanded="false"
+                                                                aria-controls="collapse12">
+                                                                Manager
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">Finance
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse12" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Inter CA or ICWA or ACS
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>8 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>State Office
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Finance and accounting of State operations; budget
+                                                                    controls. General administration; Bill receivables
+                                                                    and payables; State level Statutory and Regulatory
+                                                                    Compliance.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse13" aria-expanded="false"
+                                                                aria-controls="collapse13">
+                                                                Head
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -47px;">Legal (Land Acquisition)
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse13" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Degree or Post Grad degree in Law
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>8 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>State Office
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Will be responsible for legal due diligence and
+                                                                    acquistion of private/revenue/forest land;
+                                                                    Liaisoning and dispute settlement of land and right
+                                                                    of way (ROW) issues; Involves extensive travel to
+                                                                    sites; Interaction with clients and lenders for
+                                                                    regulatory and legal compliance of land.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse14" aria-expanded="false"
+                                                                aria-controls="collapse14">
+                                                                Project Manager
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse14" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech ( Electrical / Civil / Mech )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>15 - 20 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for land acquisiton, obtaining required
+                                                                    permits and approvals, executing projects according
+                                                                    to timelines and budget; work includes contract
+                                                                    management, construction management, single point of
+                                                                    contact with clients and head - Operations for the
+                                                                    respective states; Will also be responsible for
+                                                                    budget controls and manage cash flow.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse15" aria-expanded="false"
+                                                                aria-controls="collapse15">
+                                                                Resident Construction Manager
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -286px;">(RCM)
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse15" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech or Diploma ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>10 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Will lead a team of engineeres for the overall
+                                                                    construction activities at sites. Job includes
+                                                                    ontime delivery of projects within the budget with
+                                                                    safety and quality consciousness; Will be
+                                                                    responsible for managing employees, contractors and
+                                                                    stakeholders, government authorities and public
+                                                                    relaltions for successful completion of project.
+                                                                    Reports to the project manager on day-to-day
+                                                                    progress and MIS reporting for various stakeholders.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse16" aria-expanded="false"
+                                                                aria-controls="collapse16">
+                                                                Manager
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -79px;">Land Acquisition
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse16" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Any Degree / Post Graduate Degree ( Electrical /
+                                                                    Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>8 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Overall responsibility for acquisition of Forest,
+                                                                    Revenue & Private Land.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse17" aria-expanded="false"
+                                                                aria-controls="collapse17">
+                                                                Land Acquisition
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -149px;">Executives
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse17" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>LLB / BL; Any Degree ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Identify suitable sites and work for physical survey
+                                                                    & clearances; Liaison with govt. departments like
+                                                                    revenue, forest, Zila Panchayat, town & country,
+                                                                    etc. for obtaining necessary clearances &
+                                                                    permissions; Obtain land records pertaining to
+                                                                    private land owners and mobilize them for land
+                                                                    purchase negotiations.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse18" aria-expanded="false"
+                                                                aria-controls="collapse18">
+                                                                Lawyers
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -72px;">Land Acquisition
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse18" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>LLB / BL ( Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for legal due diligence and acquisition
+                                                                    of private/revenue/forest land.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse19" aria-expanded="false"
+                                                                aria-controls="collapse19">
+                                                                Surveyors
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse19" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>ITI / Diploma ( Civil Engg or Survey )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Proficiency in preliminary site survey, topography
+                                                                    surveying, establishing Temporary bench marks,
+                                                                    Traverse surveying , calculations, fixing site
+                                                                    controls, Control points establishing, Shifting of
+                                                                    Control points. Experience in independently handling
+                                                                    topographic survey teams and generation of survey
+                                                                    reports. Proficiency in processing of raw data
+                                                                    generated by DGPS and TS. Proficiency in various
+                                                                    survey related software
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse20" aria-expanded="false"
+                                                                aria-controls="collapse20">
+                                                                Project Team Lead
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -165px;">Civil / Electrical / Substation
+                                                                    and Transmission
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse20" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / Diploma ( Civil / Electrical /
+                                                                    Substation and Transmission )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>8 - 15 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Will lead a team of engineers to ensure timely
+                                                                    construction of wind, solar and infrastructure
+                                                                    projects; construction of electrical distribution
+                                                                    system, substations and transmission lines upto 220
+                                                                    kV. Works includes contractor management, materials
+                                                                    management, and reporting; Candidate should ensure
+                                                                    best quality and HSE practices.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse21" aria-expanded="false"
+                                                                aria-controls="collapse21">
+                                                                Project Engineers
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -157px;">(Civil & Electrical)
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse21" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / Diploma (Civil / Electrical /
+                                                                    Substation and Transmission)
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Reponsible for supervision and construction of wind,
+                                                                    solar and infrastructure projects; construction of
+                                                                    electrical distribution system, substations and
+                                                                    transmission lines upto 220 kV. Works includes
+                                                                    handling contractors, materials management, and
+                                                                    reporting; Candidate should ensure best quality and
+                                                                    HSE practices.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse22" aria-expanded="false"
+                                                                aria-controls="collapse22">
+                                                                Accountants
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -114px;">Projects sites
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse22" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.Com</h6>
+                                                                <p>Experience</p>
+                                                                <h6>4 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Establish tables of accounts, and assign entries to
+                                                                    proper accounts. Develop, maintain, and analyze
+                                                                    budgets, preparing periodic reports that compare
+                                                                    budgeted costs to actual costs. Develop, implement,
+                                                                    modify, and document recordkeeping and accounting
+                                                                    systems, making use of current computer technology.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse23" aria-expanded="false"
+                                                                aria-controls="collapse23">
+                                                                Site Administrator
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -161px;">Projects sites
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse23" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Any Graduation
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>4 - 10 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for Cleaning and General Admin,
+                                                                    Transport Management, Time Management, Housekeeping
+                                                                    Management, Security Management, Records Keeping And
+                                                                    Reports, Attendance & manpower planning, ability to
+                                                                    communicate effectively to people at all levels,
+                                                                    Maintain close working relationships with workers,
+                                                                    Client representatives, and project managers.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse24" aria-expanded="false"
+                                                                aria-controls="collapse24">
+                                                                Planning & Control
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -170px;">Projects sites
+
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse24" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E or B.Tech (Electrical/Civil)
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>4 - 7 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Responsible for planning and control project site.
+                                                                    Role includes MIS reporting and well versed with
+                                                                    projects planning and controls including financial
+                                                                    reporting.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse25" aria-expanded="false"
+                                                                aria-controls="collapse25">
+                                                                Quality Engineers
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -156px;">Projects sites
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse25" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech / Diploma ( Electrical / Civil ) (
+                                                                    Electrical / Civil )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 7 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Process and Final Inspection of all construction
+                                                                    works at project site; Adherence ISO 9001 standards;
+                                                                    Support Operations team for technical closure of
+                                                                    NCRs . Monitoring of FIFO practices site wise MIS
+                                                                    reporting.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse26" aria-expanded="false"
+                                                                aria-controls="collapse26">
+                                                                Safety Engineer
+
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -140px;">Projects Safety
+
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse26" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>M.Tech ( Safety Engineer ) / B.E / B.Tech / Diploma
+                                                                    / Any Arts Degree with certificate in Safety
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 7 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Ensure that the Health & Safety policies, standards
+                                                                    and procedures according to ISO 14001 and OHSAS
+                                                                    18001; Assist in HSE training and awareness to
+                                                                    staff, operatives and contractors, ensure training
+                                                                    needs are identified and implemented.
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse27" aria-expanded="false"
+                                                                aria-controls="collapse27">
+                                                                Store Keepers
+                                                                <p style="margin-bottom: -49px;
+                                                                margin-left: -123px;">Projects
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapse27" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>Any Degree
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 7 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Project sites at Karnataka, Madhya Pradesh,
+                                                                    Maharashtra, Gujarat, Tamil Nadu, Andhra /
+                                                                    Telangana.
+                                                                </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Maintain re-order level to ensure availability of
+                                                                    Material, Ensure timely material Availability at
+                                                                    site to reduce machine breakdown time, Visual
+                                                                    inspection for damage & count of 100% material
+                                                                    receipt, Intimation of Short receipt, Excess receipt
+                                                                    and Damage receipt to Buyer Verification of Material
+                                                                    Receipt Documents.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                                <div class="tab-pane fade" id="maintenance-tab-pane" role="tabpanel"
+                                    aria-labelledby="maintenance-tab" tabindex="0">
+                                    <div class="row ">
+
+                                        <div class="col-xl-12">
+                                            <div class="faq-wrap">
+                                                <div class="accordion" id="accordionExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button collapsed mb-3 "
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                                aria-controls="collapseOne">
+                                                                Manager/Sr. Manager
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -200px;">Business Development</p>
+                                                            </button>
+
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample" style="">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech</h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years </h6>
+                                                                <p>Location</p>
+                                                                <h6>Cochin, Kannur, Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Develop Strategies/roadmaps for business
+                                                                    Opportunities in Solar.
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTwo">
+                                                            <button class="accordion-button collapsed mb-3"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                                aria-controls="collapseTwo">
+                                                                Engineer
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -79px;">Civil</p>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingTwo"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech</h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 8 years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Hands on Experience in civil construction work
+                                                                    and projects /Submission.
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree">
+                                                            <button class="accordion-button collapsed mb-3"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseThree" aria-expanded="false"
+                                                                aria-controls="collapseThree">
+                                                                Executive/Sr. Executive
+
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -204px;">Marketing</p>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingThree"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech</h6>
+                                                                <p>Experience</p>
+                                                                <h6>3 - 5 Years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Sales and Marketing of Solar Business Solutions.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingFour">
+                                                            <button class="accordion-button collapsed mb-3"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFour" aria-expanded="false"
+                                                                aria-controls="collapseFour">
+                                                                Deputy Manager/Manager
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -244px;">Commercial</p>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingFour"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>ICWA / MBA Finance
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>10 - 15 Years
+                                                                </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Business Analytics.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingFive">
+                                                            <button class="accordion-button collapsed mb-3"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFive" aria-expanded="false"
+                                                                aria-controls="collapseFive">
+                                                                Engineer
+                                                                <p style="margin-bottom: -49px;
+                                                                    margin-left: -79px;">Utility scale grid-connected
+                                                                    solar projects
+                                                                </p>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingFive"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>Education</p>
+                                                                <h6>B.E / B.Tech ( Electrical )
+                                                                </h6>
+                                                                <p>Experience</p>
+                                                                <h6>5 - 10 years </h6>
+                                                                <p>Location</p>
+                                                                <h6>Chennai </h6>
+                                                                <p>Job Profile
+                                                                </p>
+                                                                <h6>Complete AC and DC system design of utility
+                                                                    scale grid-connected Solar
+                                                                    power Projects; responsibilites include Value
+                                                                    Engineering, BOM; Yield
+                                                                    Estimation including technical support for the
+                                                                    bidding and project
+                                                                    execution team.
+
+                                                                </h6>
+                                                                <br>
+                                                                <a href="#apply" class="btn">Apply Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="contact-area pt-1 pb-120" id="apply">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12 col-lg-10">
+                        <div class="contact-form-wrap" data-background="assets/img/images/contact_form_bg.jpg"
+                            style="background-image: url(&quot;assets/img/images/contact_form_bg.jpg&quot;);">
+                            <h2 class="title">APPLY NOW
+                            </h2>
+                            <p>Send us a message and we' ll respond as soon as possible</p>
+                            <form action="#" class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="firstName" type="text" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="lastName" type="text" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="email" type="email" placeholder="Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="phone" type="text" placeholder="Applying Position
+                                            ">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="email" type="email" placeholder="Experience">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input id="phone" type="file" placeholder="Upload your Resume
+                                            ">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grp">
+                                    <textarea id="message" placeholder="Your Message here"></textarea>
+                                </div>
+                                <button class="btn" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <!-- mian-area-end -->
+
+    <!-- footer-area -->
+    <footer>
+        <div class="footer-area footer-bg" data-background="assets/img/bg/footer_bg.jpg">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-7">
+                            <div class="footer-widget">
+                                <img src="assets/images/logo2.png">
+                                <div class="footer-content mt-3">
+                                    <p>Kshema Power & Infrastructure diversifies its business portfolio into three main
+                                        business verticals and contributes to our society by excelling in them. Your
+                                        search for developing a quality renewable energy infrastructure ends here!
+
+                                    </p>
+                                    <div class="footer-newsletter">
+                                        <h4 class="title">Subscribe to Our Newsletter</h4>
+                                        <form action="#">
+                                            <input type="text" placeholder="Enter your email">
+                                            <button type="submit" class="btn btn-two">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Our Services</h2>
+                                <div class="footer-link">
+                                    <ul class="list-wrap">
+                                        <li><a href="key-services.html"><i class="fas fa-angle-double-right"></i>Solar &
+                                                Wind Energy
+                                                Resource Assessment</a></li>
+                                        <li><a href="key-services.html"><i
+                                                    class="fas fa-angle-double-right"></i>Micro-siting</a></li>
+                                        <li><a href="key-services.html"><i class="fas fa-angle-double-right"></i>Land
+                                                Related
+                                                Services</a></li>
+                                        <li><a href="key-services.html"><i class="fas fa-angle-double-right"></i>Project
+                                                Reports</a>
+                                        </li>
+                                        <li><a href="key-services.html"><i
+                                                    class="fas fa-angle-double-right"></i>Approvals &
+                                                Permits</a></li>
+                                        <li><a href="key-services.html"><i class="fas fa-angle-double-right"></i>Project
+                                                Execution</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Quick Links</h2>
+                                <div class="footer-link">
+                                    <ul class="list-wrap">
+                                        <li><a href="index.html"><i class="fas fa-angle-double-right"></i>Home</a></li>
+                                        <li><a href="about.html"><i class="fas fa-angle-double-right"></i>Corporate</a>
+                                        </li>
+                                        <li><a href="key-services.html"><i class="fas fa-angle-double-right"></i>Key
+                                                Service</a></li>
+                                        <li><a href="Completed-Projects.html"><i
+                                                    class="fas fa-angle-double-right"></i>Projects</a></li>
+                                        <li><a href="join-kshema.html"><i class="fas fa-angle-double-right"></i>Join
+                                                Kshema</a></li>
+                                        <li><a href="reachus.html"><i class="fas fa-angle-double-right"></i>Reach Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="footer-widget">
+                                <h2 class="fw-title">Gallery</h2>
+                                <div class="footer-instagram">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img01.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img02.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img03.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img04.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img05.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/instagram/f_insta_img06.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="footer-logo-area">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-contact">
+                                    <div class="icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>Phone No</span>
+                                        <a href="tel:0123456789">+000 (123) 456 88</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-6">
+                                <div class="footer-social">
+                                    <h2 class="title">Follow Us:</h2>
+                                    <ul class="list-wrap">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="copyright-text">
+                                <p>© Copyright 2023. All Right Reserved | Developed By <a href="https://nixonit.com/">NixoNit</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-bootom-menu">
+                                <ul class="list-wrap">
+                                    <li><a href="#!">Privacy Policy</a></li>
+                                    <li><a href="#!">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/slick-animation.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/gsap-animation.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/loader.js"></script>
+
+</body>
+
+</html>
